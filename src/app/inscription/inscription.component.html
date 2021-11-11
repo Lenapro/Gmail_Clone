@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="square shadow">
+                <img src="..//../assets/imgs/maxresdefault.jpg" alt="" style="width: 150px; margin-left: 2px;">
+                <h2 style="padding-left: 2px;">Créer votre compte Google</h2>
+                <form class="example-form">
+                    <table class="form-group" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="form-group">
+                                    <mat-label>Prénom</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="form-group" style="padding-left: 30%;">
+                                    <mat-label>Nom</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <mat-form-field class="form-group">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. pat@gmail.com">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-group" style="padding-left: 13%;">
+                        <mat-label>Mon mot de passe</mat-label>
+                        <input matInput class="display-4 " style="font-size: 20px; font-weight:500;"
+                            [type]="hide ? 'password' : 'text'" name="password"
+                            pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+                            title="8 charactères au moins avec une lettre majuscule, une minuscule et des chiffres"
+                            maxlength="15" autocomplete="off">
+                        <button class="topbtn" mat-icon-button matSuffix (click)="hide = !hide"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon style="font-size: 20px;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <mat-form-field class="form-group">
+                        <mat-label><b>Date de naissance</b></mat-label>
+                        <input matInput class="display-4 " style="font-size: 20px; font-weight:500;" type="date"
+                            name="datenaissance">
+                    </mat-form-field>
+                    <mat-form-field class="form-group" style="padding-left: 13%;">
+                        <mat-label>Lieu de naissance</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                   
+                    <table class="form-group" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="form-group">
+                                    <mat-label>Ville</mat-label>
+                                    <input matInput placeholder="Ex. San Francisco">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="form-group" style="padding-left: 30%;">
+                                    <mat-label>Code Postal</mat-label>
+                                    <input matInput #postalCode maxlength="5" placeholder="Ex. 94105">
+                                    <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        <mat-form-field class="form-group">
+                            <mat-label>Addresse</mat-label>
+                            <textarea matInput placeholder="20 Route De Maison Neuve" style="color: gray;"></textarea>
+                        </mat-form-field>
+                    </p>
+                    <div class="lien">
+                        <button class="btn btn-primary" style="margin-left: 45%;">Inscription</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>

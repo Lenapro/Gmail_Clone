@@ -1,0 +1,155 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="navbar navbar-expand fixed-top">
+                <div ng-sidebar-content style="margin-left: 10px; margin-top: 5px;" class="header_side">
+                    <button (click)="_toggleSidebar()" style="border: none;">
+                        <mat-icon>
+                            menu
+                        </mat-icon>
+                    </button>
+                    
+                </div>
+                <img src="..//../assets/imgs/gmail_new_logo_icon_159149.png" alt="">
+                <h1><b> Gmail</b></h1>
+                <div class="searchBar shadow-sm ">
+                    <span class="material-icons"> search </span>
+                    <input type="text" placeholder="Recherche des messages" />
+                </div>
+                <div class="App">
+                    <span class="material-icons" style="padding-top: 10px;"> help </span>
+                    <span class="material-icons" style="margin-left: 15px; padding-top: 10px;"> settings</span>
+                    <span class="material-icons" style="margin-left: 15px; padding-top: 10px;"> apps</span>
+                    <img class="rounded-circle" src="..//../assets/imgs/blank-profile-picture-973460_640.png" alt=""
+                        style="margin-left: 15px;">
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+<ng-sidebar-container style="display:inline-flex;">
+    <ng-sidebar [(opened)]="_opened" mode="push">
+        <a href="#">
+            <div class="new_message shadow">
+                <img src="..//../assets/imgs/1024px-OOjs_UI_icon_add.svg.png" alt="">
+                <span style="padding-left: 5px;">Nouveau message</span>
+            </div>
+        </a>
+        <div class="app">
+            <a href="#">
+                <div class="function">
+                    <span class="material-icons">inbox</span>
+                    <h3>Boîte de réception</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="function">
+                    <span class="material-icons">star</span>
+                    <h3>Messages suivis</h3>
+                </div>
+            </a>
+            <a href="">
+                <div class="function">
+                    <span class="material-icons">access_time</span>
+                    <h3>En attente</h3>
+                </div>
+            </a>
+            <a href="">
+                <div class="function">
+                    <span class="material-icons">send</span>
+                    <h3>Messages envoyés</h3>
+                </div>
+            </a>
+            <a href="">
+                <div class="function">
+                    <span class="material-icons">note</span>
+                    <h3>Brouillon</h3>
+                </div>
+            </a>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <span class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne">
+                        <span class="material-icons">expand_more</span>
+                        <h3>Plus</h3>
+                    </span>
+                </h2>
+                <div class="aside">
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="function">
+                                <span class="material-icons">label_important</span>
+                                <h3>Important</h3>
+                            </div>
+                            <div class="function">
+                                <span class="material-icons">chats</span>
+                                <h3>Tous les chats</h3>
+                            </div>
+                            <div class="function">
+                                <span class="material-icons">email</span>
+                                <h3>Tous les message </h3>
+                            </div>
+                            <div class="function">
+                                <span class="material-icons">spam</span>
+                                <h3>Spam</h3>
+                            </div>
+                            <div class="function">
+                                <span class="material-icons">delete</span>
+                                <h3>Corbeille</h3>
+                            </div>
+                            <div class="function">
+                                <span class="material-icons">settings</span>
+                                <h3>Gérer les libélés</h3>
+                            </div>
+                            <div class="function">
+                                <span class="material-icons">add</span>
+                                <h3>Créer un libélé</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="aside">
+            <h3 style="margin-left: 20px;">Meet</h3>
+            <div class="function">
+                <span class="material-icons">duo</span>
+                <h3>Nouvelle réunion</h3>
+            </div>
+            <div class="function">
+                <span class="material-icons">keyboard</span>
+                <h3>Rejoindre une réunion</h3>
+            </div>
+
+        </div>
+        <h3 style="margin-left: 20px;">Hangouts</h3>
+        <div class="others">
+            <img class="rounded-circle" src="..//../assets/imgs/blank-profile-picture-973460_640.png" alt=""
+                style="margin-left: 25px;">
+            <span style="padding-left: 10px; padding-top: 10px;">Mon Profil</span>
+            <span class="material-icons" style="margin-left: 100px; padding-top: 10px">add</span>
+        </div>
+        <div class="plus">
+            <h4>
+                Pas de chat récent</h4>
+            <h4 style="color: rgb(0, 0, 200)">
+                Démarrer un nouveau chat
+            </h4>
+        </div>
+    </ng-sidebar>
+    <div ng-sidebar-content class="Appmain" id="demo">
+        <app-main></app-main>
+    </div>
+</ng-sidebar-container>
+    
+
+
+

@@ -1,0 +1,147 @@
+
+img{
+   width: 40px;
+   height: 40px;
+   margin-left: 5%;
+ 
+ }
+ h1{
+   font-family: Arial, Helvetica, sans-serif;
+   color: gray;
+   margin-left: 10px;
+   margin-top: 20px;
+ 
+ }
+ .navbar{
+   background-color:white;
+   border-bottom: 1px solid rgb(243, 242, 242);
+   align-items: center;
+   display: flex;
+ }
+ .searchBar{
+   display: flex;
+   align-items: center;
+   background-color: whitesmoke;
+   padding: 10px;
+   border-radius: 12px;
+   margin-left: 120px;
+   height: 50px;
+   width: 650px;
+ 
+ }
+ .searchBar input{
+   border: none;
+   width: 100%;
+   padding: 10px;
+   outline: none;
+   font-size: medium;
+   background-color: transparent;
+ }
+ .material-icons{
+   color: gray;
+ }
+ .App{
+   display: flex;
+   margin-left: 13%;
+ }
+ .rounded-circle{
+   width: 37px;
+   height: 37px;
+ }
+ 
+ 
+ a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+    margin-top: 10px;
+ }
+ 
+ button{
+    font-size: 50px;
+ }
+ 
+ .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+ 
+ img{
+    width: 45px;
+    height: 45px;
+ }
+ .new_message{
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    align-items: center;
+    padding-left: 5px;
+    margin-left: 8px;
+    padding-top: 8px;
+    margin-top: 36%;
+ }
+ 
+ .material-icons{
+    color: gray;
+ }
+ .function{
+    display: flex;
+    margin-left: 20px;
+ }
+ 
+ .collapsed{
+    margin-left: 20px;
+    display: flex;
+ }
+ .aside{
+    border-bottom: 1px solid whitesmoke;
+ }
+ .others{
+    display: flex;
+    border-bottom: 1px solid whitesmoke ;
+ 
+ }
+ .others img {
+    width: 35px;
+    height: 35px;
+ }
+ .plus{
+    margin-left: 50px; 
+    margin-top: 20px; 
+    text-align: center; 
+    width: 200px;
+    border-bottom: 1px solid whitesmoke ;
+ }
+ .app{
+    margin-top: 10%;
+ }
+ .under_navbar{
+    background-color:white;
+    width: 1054px;
+    height: 52px;
+    display: flex;
+    top:0;
+    position: sticky;
+    padding-top: 5px;
+    border-bottom: 1px solid rgb(243, 242, 242);
+  }
+  
+  .left {
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .Right{
+    margin-left: 50%;
+    display: inline-flex;
+    align-items: center;
+   
+  }
+ @media screen and (min-width:1000px) {
+    .Appmain{
+       margin-top: 8%;
+    }
+ }

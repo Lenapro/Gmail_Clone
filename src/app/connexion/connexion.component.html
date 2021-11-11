@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="square shadow">
+                <img src="..//../assets/imgs/maxresdefault.jpg" alt="" style="width: 150px; margin-left: 2px;">
+                <h1 style="padding-left: 2px;">Connexion</h1>
+                <h3>Utiliser votre compte Google</h3>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. pat@gmail.com">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field style="padding-left: 1%; " class="example-full-width">
+                        <mat-label>Mon mot de passe</mat-label>
+                        <input matInput style="width: 100%;" [type]="hide ? 'password' : 'text'" name="password"
+                            pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+                            title="8 charactères au moins avec une lettre majuscule, une minuscule et des chiffres"
+                            maxlength="15" autocomplete="off">
+                        <button class="topbtn" mat-icon-button matSuffix (click)="hide = !hide"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon style="font-size: 20px;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <h4 style="text-align: justify; margin-top: 7%;">S'il ne s'agit pas de votre ordinateur, utilisez le
+                        mode Invité pour vous connecter en mode privé.</h4>
+
+                </form>
+                <div class="lien">
+                    <p style="color: rgb(53, 121, 211);">
+                        <a href="../inscription/inscription.component.html">
+                            Créer un compte
+                        </a>
+                    </p>
+                    <button class="btn btn-primary" style="margin-left: 40%;">Connexion</button>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
